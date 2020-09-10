@@ -10,8 +10,23 @@ import javax.swing.JOptionPane;
 public class ChangeCalculator {
 
 	public static void main(String[] args) {
-
-		// Ask the user how many nickels they have
+		String nickels  = JOptionPane.showInputDialog("Nickels: ");
+		int NumNickel = Integer.parseInt(nickels);
+		
+		String dimes = JOptionPane.showInputDialog("Dimes: ");
+		int NumDimes = Integer.parseInt(dimes);
+		
+		String quarters = JOptionPane.showInputDialog("Quarters: ");
+		int NumQuarters = Integer.parseInt(quarters);
+		
+		double total = NumNickel*0.05 + NumDimes*0.1 + NumQuarters*0.25;
+		int evenCheck = NumQuarters + NumNickel;
+		if(evenCheck % 2 == 0) {
+			JOptionPane.showMessageDialog(null, "Total: $"+total+"0");	
+		}
+		else {
+		JOptionPane.showMessageDialog(null, "Total: $"+total);
+		}// Ask the user how many nickels they have
 
 		// Convert their answer to an int.   Hint: Integer.parseInt()  
 
