@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
  */
 
 public class ChangeCalculator {
-
+		
 	public static void main(String[] args) {
 		String nickels  = JOptionPane.showInputDialog("Nickels: ");
 		int NumNickel = Integer.parseInt(nickels);

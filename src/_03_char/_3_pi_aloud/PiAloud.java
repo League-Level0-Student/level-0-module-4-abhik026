@@ -1,6 +1,7 @@
 package _03_char._3_pi_aloud;
 
 import java.io.IOException;
+import java.util.Random;
 import java.util.Scanner;
 
 public class PiAloud {
@@ -10,8 +11,26 @@ public class PiAloud {
 	 * If you are not sure, ask your teacher 
 	 * *****************/
 	boolean canPlaySounds = true;
+	public static void main(String[] args) {
+		String pi  = "3.141592653589793238";
+		double dub = 5/9;
+		System.out.println(dub);
+		Random ran = new Random();
+		int piNum = ran.nextInt(9)+10;
+		for(int i = 0; i<piNum; i++) {
+		System.out.println(pi.charAt(i));
 	
+		}
 	
+		int input = getInputFromUser();
+		if(input == pi.charAt(piNum+1)) {
+			System.out.println("Correct");
+		}
+		else {
+		System.out.println("incorrect");	
+		}
+	
+	}
 	// 1. Make a main method and make sure your program can run
 
 	// 2. Make a String variable to hold 20 digits of Pi. You could use http://www.piday.org/million/ to get this.
@@ -22,9 +41,9 @@ public class PiAloud {
 	// 4. Print ALL the digits of the Pi String, putting each digit on a new line  (hint: use a loop)
 
 	// 5. Skip this step if your computer cannot play sounds. 
-	//		if (canPlaySounds) {
-	//				 Use the speak() method to speak each digit of Pi.   
-	//		}
+		//	if (canPlaySounds) {
+			//		speak(); 
+		//	}
 	
 	
 	// [CHALLENGE]
